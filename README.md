@@ -10,13 +10,6 @@
 - 4 - localhost:3000/api/:id   patch order (updateorder)
 - 5 - localhost:3000/api/:id   Get single order
 - 6 - localhost:3000/api/:id   Delete order
-=======
-- 1 - localhost:3000/api/youDeliverThis Post new order
-- 3 - localhost:3000/api/allOrders Get all orders
-- 4 - localhost:3000/api/:id patch order (updateorder)
-- 5 - localhost:3000/api/:id Get single order
-- 6 - localhost:3000/api/:id Delete order
->>>>>>> e859105bb2ae25d1b2f3f946c1951fdd91129193
 
 # Dashboard Directory Documentation
 
