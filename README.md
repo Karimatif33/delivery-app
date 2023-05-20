@@ -1,73 +1,90 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Dashboard Directory Documentation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This documentation provides an overview of the files and code in the Dashboard directory. The Dashboard directory contains files and code related to managing orders.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Files
 
-## Description
+The following files are included in the Dashboard directory:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- `app.controller.ts`: This file contains the controller for managing orders. It includes methods for getting all orders, getting a single order, adding an order, updating an order, and deleting an order.
+- `app.module.ts`: This file contains the module for the Dashboard directory. It includes imports for the necessary modules and controllers.
+- `app.service.ts`: This file contains the service for the Dashboard directory. It includes a method for getting a "Hello World" message.
+- `orders.controller.ts`: This file contains the controller for managing orders. It includes methods for getting all orders, getting a single order, adding an order, updating an order, and deleting an order.
+- `orders.module.ts`: This file contains the module for managing orders. It includes imports for the necessary modules and controllers.
+- `orders.service.ts`: This file contains the service for managing orders. It includes methods for getting all orders, getting a single order, adding an order, updating an order, and deleting an order.
 
-## Installation
+## Code
 
-```bash
-$ npm install
-```
+### app.service.ts
 
-## Running the app
+```typescript
+getHello(): string {
+  return 'Hello World!';
+}
 
-```bash
-# development
-$ npm run start
+This method returns a "Hello World" message.
+app.controller.ts
 
-# watch mode
-$ npm run start:dev
+@Get()
+getHello(): string {
+  return this.appService.getHello();
+}
 
-# orderion mode
-$ npm run start:prod
-```
+This method returns the "Hello World" message from the app.service.ts file.
+orders.service.ts
 
-## Test
+async getOrders() {
+  // Retrieves all orders from the database
+  // and maps them to a new object with specific properties.
+}
 
-```bash
-# unit tests
-$ npm run test
+async updateOrder(orderId: string, customerName: string, items_to_shipped: string, pickupLocation: string, deliveryLocation: string, status: string) {
+  // Updates an order in the database with new information.
+}
 
-# e2e tests
-$ npm run test:e2e
+async insertOrder(customerName: string, desc: string, pickupLocation: string, deliveryLocation: string, status: string) {
+  // Adds a new order to the database.
+}
 
-# test coverage
-$ npm run test:cov
-```
+async deleteOrder(prodId: string) {
+  // Deletes an order from the database.
+}
 
-## Support
+async getSingleOrder(orderId: string) {
+  // Retrieves a single order from the database by its ID.
+}
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+These methods handle the CRUD operations for managing orders.
+orders.controller.ts
 
-## Stay in touch
+@Get()
+async getAllOrders() {
+  // Retrieves all orders from the database and returns them.
+}
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+@Post('youDeliverThis')
+async addOrder() {
+  // Adds a new order to the database with the specified properties.
+}
 
-## License
+@Patch(':id')
+async updateOrder() {
+  // Updates an existing order in the database with the specified properties.
+}
 
-Nest is [MIT licensed](LICENSE).
+@Delete(':id')
+removeOrder() {
+  // Deletes an existing order from the database.
+}
+
+@Get(':id')
+getOrder() {
+  // Retrieves a single order from the database by its ID and returns it.
+}
+These methods handle the HTTP requests related to orders.
+Conclusion
+
+The Dashboard directory contains files and code related to managing orders. The orders.service.ts file contains methods for retrieving, adding, updating, and deleting orders from the database. The orders.controller.ts file contains methods for handling HTTP requests related to orders. The other files in the directory provide necessary imports and dependencies for the service and controller.
+
+
+
