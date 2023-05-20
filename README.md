@@ -5,11 +5,11 @@
 - 4- follow the following routes
 # Routes
 <<<<<<< HEAD
-- 1 - localhost:3000/api/youDeliverThis   Post new order
-- 3 - localhost:3000/api/allOrders   Get all orders
-- 4 - localhost:3000/api/:id   patch order (updateorder)
-- 5 - localhost:3000/api/:id   Get single order
-- 6 - localhost:3000/api/:id   Delete order
+- 1 - localhost:3000/api/youDeliverThis __ Post new order
+- 3 - localhost:3000/api/allOrders __  Get all orders
+- 4 - localhost:3000/api/:id  __  patch order (updateorder)
+- 5 - localhost:3000/api/:id  __ Get single order
+- 6 - localhost:3000/api/:id  __ Delete order
 
 # Dashboard Directory Documentation
 
