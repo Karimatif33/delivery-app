@@ -1,8 +1,8 @@
 # Run App
-1 - npm i
-2 - npm run start:dev
-3 - app will run on http://localhost:3000/
-4- follow the following routes
+- 1 - npm i
+- 2 - npm run start:dev
+- 3 - app will run on http://localhost:3000/
+- 4- follow the following routes
 
 # Dashboard Directory Documentation
 
