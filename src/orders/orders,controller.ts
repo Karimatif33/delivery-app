@@ -23,7 +23,7 @@ export class OrderController {
     return { id: genratedId };
   }
 // ///////////
-  @Get()
+  @Get('allOrders')
   async getAllOrders() {
    const orders = await this.ordersService.getOrders();
    return orders
