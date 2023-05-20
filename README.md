@@ -1,3 +1,9 @@
+# Run App
+1 - npm i
+2 - npm run start:dev
+3 - app will run on http://localhost:3000/
+4- follow the following routes
+
 # Dashboard Directory Documentation
 
 This documentation provides an overview of the files and code in the Dashboard directory. The Dashboard directory contains files and code related to managing orders.
