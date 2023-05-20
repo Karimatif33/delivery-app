@@ -1,0 +1,5 @@
+customerName,
+items to beshipped, 
+pickup location,
+ delivery location,
+and status.
